@@ -89,7 +89,7 @@ func Create(response http.ResponseWriter, request *http.Request) {
 	}
 
 	// 商品預設不上架
-	product.On_Sale = 0
+	// product.On_Sale = 0
 
 	// 接form值
 	// catalog_id = request.FormValue("catalog_id")
