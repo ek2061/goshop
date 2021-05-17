@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 
@@ -11,6 +12,13 @@ import (
 
 func main() {
 	router := mux.NewRouter()
+
+	router.HandleFunc("/test", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+		j, _ := json.Marshal(map[string]string{"msg": "test ok"})
+		w.Write(j)
+	}).Methods("GET")
 
 	router.HandleFunc("/api/product", product_api.FindAll).Methods("GET")
 	router.HandleFunc("/api/product/{id}", product_api.Search).Methods("GET")

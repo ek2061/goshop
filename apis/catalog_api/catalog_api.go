@@ -83,7 +83,7 @@ func Create(response http.ResponseWriter, request *http.Request) {
 		if err2 != nil {
 			respondWithError(response, http.StatusBadRequest, "創建商品目錄失敗")
 		} else {
-			respondWithJson(response, http.StatusOK, "更新商品目錄完成")
+			respondWithJson(response, http.StatusOK, "創建商品目錄完成")
 		}
 	}
 }
