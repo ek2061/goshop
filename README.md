@@ -86,3 +86,9 @@ $ go run main.go
 會刪除該id的商品目錄，只要條件符合  
 1. id引數是合法數字  
 2. 刪除的id存在  
+
+##  一鍵佈署
+* **執行goshop.sh**  
+ ```bash
+$ ./goshop.sh
+ ```
