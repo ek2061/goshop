@@ -1,0 +1,7 @@
+version: "3"
+services:
+    gs:
+        image: goshop
+        container_name: gs
+        ports:
+         - 7777:5000          
